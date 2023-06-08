@@ -1,0 +1,25 @@
+.custom-loader {
+    width: 80px;
+    height: 80px;
+    color: grey;
+    background:
+      conic-gradient(from  165deg at top   ,#0000, currentColor 1deg 30deg,#0000 31deg) top,
+      conic-gradient(from   75deg at left  ,#0000, currentColor 1deg 30deg,#0000 31deg) left,
+      conic-gradient(from  -15deg at bottom,#0000, currentColor 1deg 30deg,#0000 31deg) bottom, 
+      conic-gradient(from -105deg at right ,#0000, currentColor 1deg 30deg,#0000 31deg) right;
+    background-size: 100% 50%,50% 100%;
+    -webkit-mask:radial-gradient(circle 5px,#0000 90%,#000);
+    background-repeat: no-repeat;
+    animation:sh2 1.5s infinite linear;
+  }
+  .custom-loader:before {
+    content: "";
+    position: absolute;
+    inset:0;
+    background:inherit;
+    transform: rotate(45deg); 
+  }
+  
+  @keyframes sh2{ 
+    100%{transform: rotate(1turn)}
+  }
